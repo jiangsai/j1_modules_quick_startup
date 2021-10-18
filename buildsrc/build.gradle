@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+//apply plugin:  'fastmoudle'
+//apply plugin: 'maven-publish'
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:3.6.3'
+    implementation 'org.ow2.asm:asm:7.2'
+    implementation 'org.ow2.asm:asm-util:7.2'
+    implementation 'org.ow2.asm:asm-commons:7.2'
+//    implementation 'com.quinn.hunter:hunter-transform:0.9.3'
+}
+
+
+
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+//group='com.fastmoudle.module'
+//version='1.0.0'
+//archivesBaseName='fastmoudle'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//
+//            /*  repository(url: 'file:/Users/jyt/Desktop/fastmoudle_library/'){
+//                        authentication(userName: "jyt", password: "jyt123456")
+//                    }*/
+//            repository(url: uri('../fastmodule'))
+//        }
+//    }
+//}
