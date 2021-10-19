@@ -20,38 +20,33 @@ public class ModuleLoader {
     static boolean isMainPorcess = true;
     static String currentProcessName = "";
 
-    private static void loadModules() {
+//    public static void registerModule(String className) {
+//        System.out.println("jyt" + "===" + className);
+//        if (null == className) {
+//            return;
+//        }
+//        try {
+//            Object obj = Class.forName(className).getConstructor().newInstance();
+//            if (obj instanceof IFastModule) {
+//                registerModule((IFastModule) obj);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
-    }
-
-    public static void registerModule(String className) {
-        System.out.println("jyt" + "===" + className);
-        if (null == className) {
-            return;
-        }
-        try {
-            Object obj = Class.forName(className).getConstructor().newInstance();
-            if (obj instanceof IFastModule) {
-                registerModule((IFastModule) obj);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static void registerModule(IFastModule module) {
-
-        if (null == module) {
-            return;
-        }
-        module.intitFastNodeList();
-
-    }
+//    private static void registerModule(IFastModule module) {
+//
+//        if (null == module) {
+//            return;
+//        }
+//        module.intitFastNodeList();
+//
+//    }
 
     private static void initMoudle() {
         //  Test.INSTANCE.test();
-        clear();
-        loadModules();
+        // clear();
         if (isMainPorcess) {
             list.addAll(FastNode.getFastNodeList(FastNode.MAIN_PROCESS));
         } else {
@@ -79,7 +74,7 @@ public class ModuleLoader {
         initMoudle();
     }
 
-    private static void clear() {
+    public static void clear() {
         FastNode.clearMap();
         list.clear();
     }

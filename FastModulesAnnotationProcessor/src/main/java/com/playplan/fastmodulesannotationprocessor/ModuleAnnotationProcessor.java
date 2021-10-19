@@ -41,6 +41,7 @@ public class ModuleAnnotationProcessor extends AbstractProcessor {
         set.add(FastMoudleTarget.class.getCanonicalName());
         return set;
     }
+    private static boolean isCreate = false;
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
@@ -49,7 +50,7 @@ public class ModuleAnnotationProcessor extends AbstractProcessor {
         System.out.println("jytx===" + annotations);
         System.out.println("jyt===true");
 
-        if (!roundEnv.getRootElements().isEmpty()) {
+        if ((!roundEnv.getRootElements().isEmpty()) && (!isCreate)) {
             ModuleProxyCreator creator = new ModuleProxyCreator();
             try {
                 JavaFileObject jfo = processingEnv.getFiler().createSourceFile(creator.getProxyClassFullName());
@@ -57,6 +58,7 @@ public class ModuleAnnotationProcessor extends AbstractProcessor {
                 writer.write(creator.generateJavaCode());
                 writer.flush();
                 writer.close();
+                isCreate = true;
             } catch (Exception e) {
                 e.printStackTrace();
             }

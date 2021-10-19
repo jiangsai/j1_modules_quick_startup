@@ -38,7 +38,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     api 'org.greenrobot:eventbus:3.2.0'
-    annotationProcessor "org.greenrobot:eventbus-annotation-processor:3.2.0"
+   // annotationProcessor "org.greenrobot:eventbus-annotation-processor:3.2.0"
 
     api project(path: ':modules:j1_modules_quick_startup:fastmodules')
     annotationProcessor project(path: ':modules:j1_modules_quick_startup:FastModulesAnnotationProcessor')

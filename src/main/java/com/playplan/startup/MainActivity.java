@@ -1,14 +1,10 @@
 package com.playplan.startup;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.playplan.myapplication.MessageEvent;
-import com.playplan.test.Test;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 /***
  * 初步构思
@@ -22,19 +18,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Test.test();
+        // Test.test();
 //        EventBus eventBus = EventBus.builder()
 //                .addIndex(new MyEventBusIndex())
 //                .addIndex(new MyEventBusIndex2())
 //                .build();
+        Log.e("jyt", "ddd");
 
 
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void bvbv(MessageEvent event) {
-
-    }
-
-    ;
 }

@@ -18,7 +18,6 @@ android {
                 arguments = [eventBusIndex: 'org.greenrobot.eventbusperf.MyEventBusIndex']
             }
         }
-
     }
 
     buildTypes {
@@ -45,4 +44,11 @@ dependencies {
 
 
 
+}
+import com.playplan.fastmoudleplugin.module.FastModulePlugin
+apply plugin: FastModulePlugin
+fastmoduleconf{
+    testName='haha'
+    fastModules=["com/playplan/test/app1",
+                 'com/playplan/testb/app2',]
 }
