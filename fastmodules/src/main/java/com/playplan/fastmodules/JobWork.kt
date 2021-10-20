@@ -10,7 +10,7 @@ import java.util.concurrent.Executors
  * time   : 2021/03/31
  * desc   :
  */
-object Test {
+object JobWork {
 
     private val dispatcher = Executors.newFixedThreadPool(6).asCoroutineDispatcher()
     private var priority = 0
@@ -19,7 +19,7 @@ object Test {
     private var job: Job? = null
     private var isEnd = false
 
-    fun ss(list: ArrayList<FastNode>) {
+    fun toJob(list: ArrayList<FastNode>) {
 
         runBlocking {
             val listJob = mutableListOf<Job>()
@@ -52,7 +52,7 @@ object Test {
 
         if (priority < max) {
             priority++
-            ss(list)
+            toJob(list)
         }
 
     }

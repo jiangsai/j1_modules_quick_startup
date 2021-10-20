@@ -1,7 +1,7 @@
 package com.playplan.fastmodules.module;
 
 
-import com.playplan.fastmodules.Test;
+import com.playplan.fastmodules.JobWork;
 import com.playplan.fastmodules.node.FastNode;
 
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class ModuleLoader {
         System.out.println("jyt" + "allmoudle===" + currentTimeMillis);
 
         Collections.sort(list);
-        Test.INSTANCE.ss(list);
+        JobWork.INSTANCE.toJob(list);
 
 
         long currentTimeMillisend = System.currentTimeMillis();
