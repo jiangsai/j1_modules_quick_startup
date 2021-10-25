@@ -4,11 +4,11 @@ buildscript {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
-        maven {url(uri('./fastmodule')) }
+     //   maven {url(uri('./fastmodule')) }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.1"
-        classpath "com.playplan.startup:fastmoudle:1.0.0"
+     //   classpath "com.playplan.startup:fastmoudle:1.0.0"
     }
 }
 

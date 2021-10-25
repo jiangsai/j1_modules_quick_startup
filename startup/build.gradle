@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.application'
-    id 'fastmoudle'
+  //  id 'fastmoudle'
 }
 
 android {
@@ -51,8 +51,8 @@ dependencies {
 }
 //import com.playplan.fastmoudleplugin.module.*
 //apply plugin: FastModulePlugin
-fastmoduleconf{
-    testName='haha'
-    fastModules=["com/playplan/test/app1",
-                 'com/playplan/testb/app2',]
-}
+//fastmoduleconf{
+//    testName='haha'
+//    fastModules=["com/playplan/test/app1",
+//                 'com/playplan/testb/app2',]
+//}
