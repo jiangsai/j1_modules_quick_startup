@@ -38,8 +38,19 @@ public class HelloWorld  implements IFastModule {
    
     @Override
     public void intitFastNodeList() {
-        //这里做组件初始化操作
-        Log.e("jyt","test === initFastNodeList");
+        
+        //FastNode 细心的为你 提供了你要初始化的优先级，是否在主线程工作 ,需要在什么进程工作
+        new FastNode(() -> {
+            todo1();
+        }, 0, false)
+        .addOtherProcess("test1")
+        .addOtherProcess("test2");
+        
+        //当然你也可以把任务在另起一个节点，就可以在一个组件里面也支持并发了
+         new FastNode(() -> {
+            todo2();
+        }, 0, false);
+
     }
 }
 ```
