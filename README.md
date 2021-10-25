@@ -18,6 +18,7 @@ buildscript {
 ```
 
 ##  2 在项目buid加入
+```xml
 plugins {
     id 'fastmoudle'
 }
@@ -30,10 +31,11 @@ fastmoduleconf{
     fastModules=["你app的路径，请用/区分",]
 }
 
-
+```
 
 ## 3 在你需要初始化的组件中实现 IFastModule
 
+```xml
 public class App组件  implements IFastModule {
    
     @Override
@@ -42,9 +44,11 @@ public class App组件  implements IFastModule {
         Log.e("jyt","test === initFastNodeList");
     }
 }
+```
 
 ## 4 在你主app中初始化 加入下面代码
 
+```xml
 public class App extends Application {
     @Override
     public void onCreate() {
@@ -53,6 +57,6 @@ public class App extends Application {
     }
 
 }
-
+```
 
 
