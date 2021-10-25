@@ -31,5 +31,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
 
-    api project(path: ':modules:j1_modules_quick_startup:basemodules')
+    //api project(path: ':modules:j1_modules_quick_startup:basemodules')
+    api project(':basemodules')
 }

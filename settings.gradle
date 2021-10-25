@@ -1,0 +1,12 @@
+rootProject.name = "j1_modules_quick_startup"
+include ':app'
+include ':testa'
+include ':testb'
+include ':basemodules'
+include ':fastmodules'
+
+
+include ':startup_plugin'
+include ':startup'
+
+//include ':FastModulesAnnotationProcessor'

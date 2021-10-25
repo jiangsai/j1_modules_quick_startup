@@ -1,54 +1,28 @@
-plugins {
-    id 'com.android.application'
-   // id 'fastmoudle'
-}
-
-android {
-    compileSdkVersion 30
-
-    defaultConfig {
-        applicationId "com.playplan.startup"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [eventBusIndex: 'org.greenrobot.eventbusperf.MyEventBusIndex']
-            }
-        }
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {url(uri('./fastmodule')) }
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.1"
+        classpath "com.playplan.startup:fastmoudle:1.0.0"
     }
 }
 
-dependencies {
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    api 'org.greenrobot:eventbus:3.2.0'
-   // annotationProcessor "org.greenrobot:eventbus-annotation-processor:3.2.0"
-    implementation project(path: ':modules:j1_modules_quick_startup:testa')
-    implementation project(path: ':modules:j1_modules_quick_startup:testb')
-
-
-
+    //    maven {url(uri('./modules/j1_modules_quick_startup/fastmodule')) }
+        // Warning: this repository is going to shut down soon
+    }
 }
-import com.playplan.fastmoudleplugin.module.FastModulePlugin
-apply plugin: FastModulePlugin
-fastmoduleconf{
-    testName='haha'
-    fastModules=["com/playplan/test/app1",
-                 'com/playplan/testb/app2',]
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
