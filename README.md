@@ -27,8 +27,8 @@ dependencies {
 }
 
 fastmoduleconf{
-  //com/playplan/boot/App
-    fastModules=["你app的路径，请用/区分",]
+  //com/playplan/boot/HelloWorld
+    fastModules=["你组件类的的路径，请用/区分",]
 }
 
 ```
@@ -36,7 +36,7 @@ fastmoduleconf{
 ## 3 在你需要初始化的组件中实现 IFastModule
 
 ```xml
-public class App组件  implements IFastModule {
+public class HelloWorld  implements IFastModule {
    
     @Override
     public void intitFastNodeList() {
