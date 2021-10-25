@@ -58,17 +58,9 @@ public class ModuleLoader {
             list.addAll(FastNode.getFastNodeList(currentProcessName));
         }
 
-        System.out.println("jyt" + "===" + list.size());
-
-        long currentTimeMillis = System.currentTimeMillis();
-        System.out.println("jyt" + "allmoudle===" + currentTimeMillis);
-
         Collections.sort(list);
         JobWork.INSTANCE.toJob(list);
 
-
-        long currentTimeMillisend = System.currentTimeMillis();
-        System.out.println("jyt" + "allmoudle===" + (currentTimeMillisend - currentTimeMillis));
 
         clear();
     }

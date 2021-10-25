@@ -57,55 +57,5 @@ object JobWork {
 
     }
 
-    fun test() {
-        var time = System.currentTimeMillis()
-        var time2 = time + 9 * 1000
-
-        while (time != time2) {
-            time = System.currentTimeMillis()
-        }
-        /* runBlocking {
-             var time = System.currentTimeMillis()
-             var time2 = System.currentTimeMillis() + 20 * 1000
-
-             while (time != time2) {
-                 time = System.currentTimeMillis()
-             }
-         }*/
-
-        /* println("jyt-error" + "=====in")
-         runBlocking {
-             var d = async(Dispatchers.IO) {
-                 var time = System.currentTimeMillis()
-                 var time2 = System.currentTimeMillis() + 1 * 1000
-
-                 while (time != time2) {
-                     time = System.currentTimeMillis()
-                 }
-             }
-
-             try {
-                 d.await()
-             } catch (e: Exception) {
-                 println("jyt-error" + "=====" + e.message)
-             }
-
-         }*/
-
-    }
-
-
-    /* fun Job.lifeRecycle(lifecycle: Lifecycle): Job {
-         lifecycle.addObserver(object : LifecycleEventObserver {
-             override fun onStateChanged(source: LifecycleOwner, event: Lifecycle.Event) {
-                 if (event == Lifecycle.Event.ON_DESTROY) {
-                     cancelChildren()
-                     cancel()
-                 }
-             }
-         })
-         return this
-     }*/
-
 }
 
