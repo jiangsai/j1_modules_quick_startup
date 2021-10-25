@@ -2,6 +2,7 @@ package com.playplan.fastmodules.module;
 
 
 import com.playplan.fastmodules.JobWork;
+import com.playplan.fastmodules.TestModuleProxyCreator;
 import com.playplan.fastmodules.node.FastNode;
 
 import java.util.ArrayList;
@@ -47,6 +48,10 @@ public class ModuleLoader {
     private static void initMoudle() {
         //  Test.INSTANCE.test();
         // clear();
+        clear();
+
+        new TestModuleProxyCreator().initData();
+
         if (isMainPorcess) {
             list.addAll(FastNode.getFastNodeList(FastNode.MAIN_PROCESS));
         } else {

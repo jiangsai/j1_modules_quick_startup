@@ -16,8 +16,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ModuleLoader.clear();
-        new TestModuleProxyCreator().initData();
+       
         ModuleLoader.initMoudle(SystemUtil.getCurProcessName(), SystemUtil.isProcess(BuildConfig.APPLICATION_ID));
     }
 }
