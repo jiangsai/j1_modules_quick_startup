@@ -17,12 +17,13 @@ buildscript {
 }
 ```
 
-##  2 在项目buid加入
+##  2 在主项目buid加入
 ```xml
 plugins {
     id 'fastmoudle'
 }
 dependencies {
+    //这个写在base里就好了，不然每个moudle都要写
     implementation 'com.github.jiangsai:j1_modules_fastmodules:1.0.0'
 }
 
