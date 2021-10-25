@@ -2,10 +2,7 @@
 启动优化组件
 
 
-
-
-## 1 使用方式
-## 在根buid加入
+## 1 在根buid加入
 ```xml
 buildscript {
     repositories { 
