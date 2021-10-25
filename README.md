@@ -6,7 +6,7 @@
 
 ## 1 使用方式
 ## 在根buid加入
-
+```xml
 buildscript {
     repositories { 
         maven { url 'https://jitpack.io' }
@@ -15,7 +15,7 @@ buildscript {
         classpath "com.github.jiangsai:j1_modules_startup_plugin:1.0.0"
     }
 }
-
+```
 
 ##  2 在项目buid加入
 plugins {
