@@ -1,5 +1,5 @@
-# j1_modules_quick_startup
-启动优化组件
+# FastModule
+启动优化组件,让你的项目启动速度更快
 
 
 ## 1 在根buid加入
